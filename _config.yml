@@ -18,6 +18,7 @@ email: nfs200@abv.bg
 description: The funniest cafe
 destination: docs
 baseurl: "/jekyll-site" # the subpath of your site, e.g. /blog
+# baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: i don`t have twitter account
 github_username:  Peshakof
@@ -39,3 +40,7 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - docs
+  - _assets
+  - gulpfile.js
+  - package.json
+  - package-lock.json
