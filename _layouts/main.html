@@ -4,11 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cats</title>
+    <link rel="stylesheet" href="{{ site.baseurl }}/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/site.css">
+    <script src="{{ site.baseurl }}/scripts/site.js"></script>
+    <title>{{ site.title }}</title>
 </head>
 <body>
-    <h1>I love cats</h1>
 
-    {{ content }}
+    <div class="site">
+
+        <header class="site-header">
+            <h1>
+                <a href="{{ site.baseurl }}/">I love cats</a>
+            </h1>
+
+            {% include navigation.html location="header" %}
+
+        </header>
+       
+        <main class="site-main">
+
+            {{ content }}
+            
+        </main>
+        
+        <footer class="site-footer">
+            {% include footer.html location="footer" %}
+        </footer>
+
+    </div>
+
 </body>
 </html>
