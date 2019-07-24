@@ -22,7 +22,10 @@
 
     .site-header nav li {
         display: inline-block;
+    }
 
+    .site-header a {
+        padding: 0.25em 1em;
     }
     
 }
