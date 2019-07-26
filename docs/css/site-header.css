@@ -1,0 +1,18 @@
+.site-header {
+    background-color: var(--color-primery);
+    border-radius: 5px;
+}
+
+.site-header a {
+    color: var(--color-darker);
+}
+
+.site-header h1:hover a{
+    background-color: var(--color-darker);
+    color: var(--color-primery);
+}
+
+.site-header a:hover {
+    border-bottom: 3px solid var(--color-hover);
+    border-radius: 0.2em;
+}
