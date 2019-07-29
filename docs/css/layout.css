@@ -5,20 +5,16 @@
 }
 
 @media ( min-width: 1024px ) {
+
     .site-header {
         display: flex;
         align-items: center;
-        padding-left: 0.5em;
+        padding-left: 1em;
         margin-bottom: 3em;
     }
 
-    .site-header h1 {
-        margin-bottom: 0;
-        border-radius: 0.1em;
-    }
+    .logo {
 
-    .site-header h1 i {
-        padding-right: 0.2em;
     }
 
     .site-header nav {
@@ -29,7 +25,7 @@
         display: inline-block;
     }
 
-    .site-header a {
+    .site-header nav a {
         padding: 0.25em 1em;
     }
     
