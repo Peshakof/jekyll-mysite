@@ -7,25 +7,26 @@
     padding: 1em;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(10, 200px);
+    grid-template-rows: autofill;
     grid-gap: 1.5em;
     width: 1000px;
     justify-content: center;
 }
 
 .gallery ul li {
+    transition: all 0.1s ease-in;
     position: relative;
     display: block;
-    transition: box-shadow 0.1s ease-in-out;
+    overflow: hidden;
+    border-radius: 0.5em;
+    border: 1px solid #67686b;
 }
 
-.gallery ul li:hover img {
+.gallery ul li:hover  {
     box-shadow: 0px 0px 8px 2px var(--color-hover, 1);
-    position: absolute;
-    top: 15%;
-    left: 0;
-    transform: scale(2);
+    transform: scale(1.6);
     z-index: 100; 
+    border-radius: 0.5em;
 }
 
 .gallery ul li::before {
@@ -35,7 +36,6 @@
 }
 
 .gallery li img {
-    transition: all 0.2s ease-in;
     width: 100%;
     height: auto;
     display: block;
@@ -43,8 +43,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 1px solid #67686b;
-    border-radius: 0.4em;
+    border-radius: 0.5em;
 }
 
 #up {
