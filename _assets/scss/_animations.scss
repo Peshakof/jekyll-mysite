@@ -9,13 +9,14 @@
 
 
 /* gallery */
-.gallery ul li:nth-child(odd) {
+
+/* .gallery ul li:nth-child(odd) {
     animation: slide-odd 0.15s alternate ease-in both;
 }
 
 .gallery ul li:nth-child(even) {
     animation: slide-even 0.15s alternate ease-in both;
-}
+} */
 
 @keyframes slide-odd {
     from {
@@ -59,5 +60,13 @@
 .gallery ul li:nth-child(16) {animation-delay: 0.4s;}
 .gallery ul li:nth-child(18) {animation-delay: 0.45s;}
 
+.gallery ul li {
+    transition: transform 0.1s ease-in;
+}
 
+.gallery ul li:hover  {
+    box-shadow: 0px 0px 8px 2px var(--color-hover, 1);
+    transform: scale(1.6);
+    z-index: 100; 
+}
     
