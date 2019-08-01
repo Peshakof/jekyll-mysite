@@ -70,3 +70,14 @@
     z-index: 100; 
 }
     
+// beeds
+
+@keyframes bounce {
+    from {
+        top: -3px;
+    }
+
+    to {
+        top: -15px;
+    }
+}
