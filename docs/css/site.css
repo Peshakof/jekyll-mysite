@@ -191,6 +191,34 @@ blockquote .author:before {
 .site-header nav li:not(:last-child) {
   border-right: 1px solid #666; }
 
+footer {
+  margin-top: 3em;
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+  border-top: 1px solid var(--color-hover); }
+  footer .logo {
+    display: flex;
+    align-items: center; }
+    footer .logo span {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      width: 2em;
+      height: 2em;
+      border-radius: 50%; }
+      footer .logo span img {
+        width: 100%;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+    footer .logo p {
+      padding-bottom: 0;
+      color: var(--color-darker); }
+
 .main header {
   color: var(--color-primery);
   text-shadow: 0px 0px 7px #3b3d38; }
