@@ -384,7 +384,7 @@ blockquote .author:before {
     transform: translate(-50%, -50%);
     border-radius: 0.5em; }
 
-#up {
+#toTop {
   display: block;
   position: relative;
   width: 2em;
@@ -398,11 +398,11 @@ blockquote .author:before {
   border: 1px solid #000;
   border-radius: 50%;
   transition: all 0.1s ease-in; }
-  #up:hover {
+  #toTop:hover {
     box-shadow: 0px 0px 5px 2px var(--color-hover, 1);
     background-color: #000;
     opacity: 1; }
-  #up i {
+  #toTop i {
     display: block;
     position: absolute;
     top: 50%;
