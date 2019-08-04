@@ -6,59 +6,7 @@
 }
 
 
-
-
 /* gallery */
-
-/* .gallery ul li:nth-child(odd) {
-    animation: slide-odd 0.15s alternate ease-in both;
-}
-
-.gallery ul li:nth-child(even) {
-    animation: slide-even 0.15s alternate ease-in both;
-} */
-
-@keyframes slide-odd {
-    from {
-        display: none;
-        transform: translate(-2em, -4em);
-    }
-    to {
-        transform: translate(0);
-        display: block;
-    }
-}
-
-.gallery ul li:nth-child(3) {animation-delay: 0.05s;}
-.gallery ul li:nth-child(5) {animation-delay: 0.1s;}
-.gallery ul li:nth-child(7) {animation-delay: 0.15s;}
-.gallery ul li:nth-child(9) {animation-delay: 0.2s;}
-.gallery ul li:nth-child(11) {animation-delay: 0.25s;}
-.gallery ul li:nth-child(13) {animation-delay: 0.3s;}
-.gallery ul li:nth-child(15) {animation-delay: 0.35s;}
-.gallery ul li:nth-child(17) {animation-delay: 0.4s;}
-.gallery ul li:nth-child(19) {animation-delay: 0.45s;}
-
-@keyframes slide-even {
-    from {
-        display: none;
-        transform: translate(2em, 4em);
-    }
-    to {
-        transform: translate(0);
-        display: block;
-    }
-}
-
-.gallery ul li:nth-child(2) {animation-delay: 0.05s;}
-.gallery ul li:nth-child(4) {animation-delay: 0.1s;}
-.gallery ul li:nth-child(6) {animation-delay: 0.15s;}
-.gallery ul li:nth-child(8) {animation-delay: 0.2s;}
-.gallery ul li:nth-child(10) {animation-delay: 0.25s;}
-.gallery ul li:nth-child(12) {animation-delay: 0.3s;}
-.gallery ul li:nth-child(14) {animation-delay: 0.35s;}
-.gallery ul li:nth-child(16) {animation-delay: 0.4s;}
-.gallery ul li:nth-child(18) {animation-delay: 0.45s;}
 
 .gallery ul li {
     transition: transform 0.1s ease-in;
@@ -70,7 +18,7 @@
     z-index: 100; 
 }
     
-// beeds
+//  breeds
 
 @keyframes bounce {
     from {
@@ -85,7 +33,18 @@
 @keyframes slide {
     from {
         opacity: 0;
-        transform: translate(-2em, -1em);
+        transform: translate(-3em, -1em);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes slide-even {
+    from {
+        opacity: 0;
+        transform: translate(3em, 1em);
     }
     to {
         opacity: 1;
