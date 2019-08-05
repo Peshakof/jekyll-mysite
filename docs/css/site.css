@@ -219,6 +219,78 @@ footer {
       padding-bottom: 0;
       color: var(--color-darker); }
 
+.articles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  position: relative; }
+  .articles article {
+    grid-column: span 3;
+    padding: 0 2em;
+    margin-bottom: 3em; }
+    .articles article h2 {
+      text-align: center;
+      border-bottom: 1px solid var(--color-hover);
+      margin-bottom: 1.5em; }
+    .articles article .image-container {
+      display: block;
+      position: relative;
+      width: 40em;
+      margin: 0 auto;
+      padding-bottom: 5em; }
+      .articles article .image-container img {
+        width: 100%;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 40px 40px 50px 0px rgba(0, 0, 0, 0.75);
+        border-radius: 1em 0 1em 0; }
+      .articles article .image-container:before {
+        display: block;
+        content: '';
+        padding-top: 56.25%; }
+    .articles article .skew-left {
+      transform: skew(5deg, 5deg); }
+    .articles article .skew-right {
+      transform: skew(-5deg, -5deg); }
+    .articles article .top {
+      margin-top: 5em; }
+    .articles article p {
+      padding-bottom: 0.5em; }
+  .articles .partners {
+    grid-column: span 1;
+    padding: 1em 0.5em;
+    grid-area: 1 / 4 / 2 / 4;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4em 7em 7em 7em 7em 7em;
+    grid-row-gap: 2em;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 2em; }
+    .articles .partners h4 {
+      border-bottom: 1px solid var(--color-hover);
+      text-align: center; }
+    .articles .partners .partner-logo {
+      box-shadow: 30px 30px 50px 0px rgba(0, 0, 0, 0.75);
+      position: relative;
+      width: 60%;
+      display: block;
+      overflow: hidden;
+      transform: skew(-3deg, 0deg);
+      justify-self: center; }
+      .articles .partners .partner-logo img {
+        width: 80%;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+
 .main header {
   color: var(--color-primery);
   text-shadow: 0px 0px 7px #3b3d38; }

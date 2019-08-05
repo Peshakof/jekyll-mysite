@@ -1,0 +1,99 @@
+.articles {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    position: relative;
+
+    article {
+        grid-column: span 3;
+        padding: 0 2em;
+        margin-bottom: 3em;
+        
+        h2 {
+            text-align: center;
+            border-bottom: 1px solid var(--color-hover);
+            margin-bottom: 1.5em;
+        }
+        
+        .image-container {
+            display: block;
+            position: relative;
+            width: 40em;
+            margin: 0 auto;
+            padding-bottom: 5em;
+
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                box-shadow: 40px 40px 50px 0px rgba(0,0,0,0.75);
+                border-radius: 1em 0 1em 0;
+            }
+
+            &:before {
+                display: block;
+                content: '';
+                padding-top: 56.25%;
+            }
+        }
+
+        .skew-left {
+            transform: skew(5deg, 5deg);
+        }
+
+        .skew-right {
+            transform: skew(-5deg, -5deg);
+        }
+
+        .top {
+            margin-top: 5em;
+        }
+
+        p {
+            padding-bottom: 0.5em;
+        }
+    }
+    
+    .partners {
+        grid-column: span 1;
+        padding: 1em 0.5em;
+        grid-area: 1 / 4 / 2 / 4;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 4em 7em 7em 7em 7em 7em;
+        grid-row-gap: 2em;
+        position: sticky;
+        top: 2em;
+        
+        h4 {
+            border-bottom: 1px solid var(--color-hover);
+            text-align: center;
+        }
+        
+        .partner-logo {
+            box-shadow: 30px 30px 50px 0px rgba(0,0,0,0.75);
+            position: relative;
+            width: 60%;
+            display: block;
+            overflow: hidden;
+            transform: skew(-3deg, 0deg);
+            justify-self: center;
+
+            img {
+                width: 80%;
+                height: auto;
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+    
+}
+
