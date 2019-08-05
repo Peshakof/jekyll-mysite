@@ -1,13 +1,16 @@
 .site-header {
-    background-color: var(--color-primery);
+    background-color: var(--color-darker);
     border-radius: 5px;
     border-bottom: 2px solid var(--color-hover);
+    color: var(--color-primery);
+    box-shadow: 5px 5px 10px 4px rgba(0,0,0,0.75);
 }
 
 .site-header .logo {
     display: flex;
     align-items: flex-end;
-    padding: 0.5em;
+    padding: 0 0.5em;
+    color: var(--color-primery);
 }
 
 .site-header .logo:hover {
@@ -19,13 +22,15 @@
     position: relative;
     display: block;
     overflow: hidden;
-    width: 3.5em;
-    height: 3.5em;
+    width: 3em;
+    height: 3em;
+    border: 1px solid var(--color-primery);
     border-radius: 50%;
 }
 
 .site-header .logo span:nth-child(2) {
-    font-size: 1.8em;
+    font-size: 1.4em;
+    text-transform: uppercase;
 }
 
 .site-header .logo span img {
@@ -43,7 +48,6 @@
 }
 
 .site-header a:hover {
-    border-bottom: 2px solid var(--color-hover);
+    box-shadow: 0px 0px 8px 2px var(--color-hover, 1);    
     border-radius: 0.2em;
 }
-
