@@ -406,7 +406,9 @@ footer {
       top: 3em; } }
   @media (max-width: 650px) {
     .main .latest-posts .wide header {
-      top: 1em; } }
+      top: 1em;
+      position: absolute;
+      z-index: 200; } }
 
 /* site header */
 .site-header a,
