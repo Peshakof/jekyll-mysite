@@ -1,7 +1,15 @@
 .articles {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto;
+
+    @include layout( laptop ) {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+    }
+
+    @include layout( phone ) {
+        display: block;
+    }
+
     position: relative;
 
     article {
