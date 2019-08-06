@@ -1,4 +1,82 @@
-.main header {
-    color: var(--color-primery);
-    text-shadow: 0px 0px 7px rgba(59, 61, 56, 1);
+.main {
+
+    header {
+        color: var(--color-primery);
+        text-shadow: 0px 0px 10px rgba(59, 61, 56, 1);
+        text-align: center;
+    }
+
+    .homepage-content header {
+        color: var(--color-darker);
+    }
+
+    .homepage-content-head {
+        padding-top: 4em;
+    }
+
+    .latest-posts {
+        padding: 0 0.2em;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(4, 16em);
+        grid-gap: 0.5em;
+        background-image: linear-gradient(to right, #3b3d38, #54653b, #6e903a, #8abd30, #a8eb12);
+        border-radius: 0.5em;
+        
+        li {
+            position: relative;
+            display: block;
+
+            header {
+                position: absolute;
+                z-index: 200;
+                text-shadow: 1px 1px 4px rgba(0,0,0,1);
+                
+                h6 {
+                    border-bottom: 1px solid var(--color-hover);
+                    text-align: center;
+                }
+
+                a {
+                    color: var(--color-primery);
+                    font-weight: bold;
+                }
+            }
+            
+            img {
+                box-shadow: 20px 20px 35px 0px rgba(0,0,0,0.75);
+                width: 100%;
+                height: auto;
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            &:hover img {
+                box-shadow: 0px 0px 25px 2px var(--color-hover, 1); 
+            }
+        }
+
+        .small {
+            grid-column: span 2;
+            grid-row: span 1;
+            width: 100%;
+
+            header {
+                top: 1em;
+            }
+        }
+
+        .wide {
+            width: 100%;
+            grid-column: span 3;
+            grid-row: span 2;
+
+            header {
+                top: 3em;
+            }
+        }
+    }
 } 

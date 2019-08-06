@@ -115,17 +115,18 @@ blockquote .author:before {
     overflow: hidden;
     text-align: center;
     width: 100%;
-    height: 25em;
     border-radius: .5em; }
-  .main header img {
-    width: 100%;
-    height: auto;
-    display: block;
-    position: absolute;
-    z-index: -1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); } }
+  .home-page-header {
+    height: 25em; }
+    .home-page-header img {
+      width: 100%;
+      height: auto;
+      display: block;
+      position: absolute;
+      z-index: -1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); } }
 
 .site-header {
   background-color: var(--color-darker);
@@ -300,12 +301,67 @@ footer {
 
 .main header {
   color: var(--color-primery);
-  text-shadow: 0px 0px 7px #3b3d38; }
+  text-shadow: 0px 0px 10px #3b3d38;
+  text-align: center; }
+
+.main .homepage-content header {
+  color: var(--color-darker); }
+
+.main .homepage-content-head {
+  padding-top: 4em; }
+
+.main .latest-posts {
+  padding: 0 0.2em;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 16em);
+  grid-gap: 0.5em;
+  background-image: linear-gradient(to right, #3b3d38, #54653b, #6e903a, #8abd30, #a8eb12);
+  border-radius: 0.5em; }
+  .main .latest-posts li {
+    position: relative;
+    display: block; }
+    .main .latest-posts li header {
+      position: absolute;
+      z-index: 200;
+      text-shadow: 1px 1px 4px black; }
+      .main .latest-posts li header h6 {
+        border-bottom: 1px solid var(--color-hover);
+        text-align: center; }
+      .main .latest-posts li header a {
+        color: var(--color-primery);
+        font-weight: bold; }
+    .main .latest-posts li img {
+      box-shadow: 20px 20px 35px 0px rgba(0, 0, 0, 0.75);
+      width: 100%;
+      height: auto;
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+    .main .latest-posts li:hover img {
+      box-shadow: 0px 0px 25px 2px var(--color-hover, 1); }
+  .main .latest-posts .small {
+    grid-column: span 2;
+    grid-row: span 1;
+    width: 100%; }
+    .main .latest-posts .small header {
+      top: 1em; }
+  .main .latest-posts .wide {
+    width: 100%;
+    grid-column: span 3;
+    grid-row: span 2; }
+    .main .latest-posts .wide header {
+      top: 3em; }
 
 /* site header */
 .site-header a,
 .logo a {
   transition: all 0.3s ease-out; }
+
+.latest-posts li img {
+  transition: box-shadow 0.2s ease-in; }
 
 /* gallery */
 .gallery ul li {

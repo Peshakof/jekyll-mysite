@@ -32,19 +32,21 @@
         overflow: hidden;
         text-align: center;
         width: 100%;
+        border-radius: .5em;   
+    }
+
+    .home-page-header {
         height: 25em;
-        border-radius: .5em;
-    }
 
-    .main header img {
-        width: 100%;
-        height: auto;
-        display: block;
-        position: absolute;
-        z-index: -1;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            position: absolute;
+            z-index: -1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }    
     }
-
 }
