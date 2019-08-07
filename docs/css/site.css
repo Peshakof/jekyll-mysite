@@ -192,14 +192,16 @@ blockquote .author:before {
   border-right: 1px solid #666; }
 
 footer {
-  margin-top: 3em;
+  margin-top: 5em;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   padding: 1em;
   border-top: 1px solid var(--color-hover); }
   footer .logo {
     display: flex;
-    align-items: center; }
+    align-items: center;
+    margin-bottom: 1em; }
     footer .logo span {
       position: relative;
       display: block;
@@ -218,6 +220,31 @@ footer {
     footer .logo p {
       padding-bottom: 0;
       color: var(--color-darker); }
+  footer .social-media ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  footer .social-media li {
+    list-style: none;
+    font-size: 2.5em;
+    border: 3px solid var(--color-darker);
+    width: 1.7em;
+    height: 1.7em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease-in; }
+    footer .social-media li:not(:last-child) {
+      margin-right: 0.3em; }
+    footer .social-media li:hover {
+      border-color: var(--color-hover);
+      box-shadow: 0px 0px 5px 2px var(--color-darker, 1); }
+    footer .social-media li:hover .social-icon {
+      color: var(--color-hover); }
+    footer .social-media li .social-icon {
+      color: var(--color-darker);
+      transition: color 0.2s ease-in; }
 
 .articles {
   position: relative; }
