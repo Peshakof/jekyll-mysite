@@ -192,12 +192,17 @@ blockquote .author:before {
   border-right: 1px solid #666; }
 
 footer {
-  margin-top: 5em;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   padding: 1em;
   border-top: 1px solid var(--color-hover); }
+  @media (min-width: 1024px) {
+    footer {
+      margin-top: 5em; } }
+  @media (max-width: 650px) {
+    footer {
+      margin-top: 2em; } }
   footer .logo {
     display: flex;
     align-items: center;

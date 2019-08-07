@@ -1,5 +1,13 @@
 footer {
-    margin-top: 5em;
+
+    @include layout( laptop ) {
+        margin-top: 5em;
+    }
+
+    @include layout( phone ) {
+        margin-top: 2em;
+    }
+    
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
