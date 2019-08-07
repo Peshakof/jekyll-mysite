@@ -96,6 +96,7 @@
             display: grid;
             grid-template-columns: 1fr;
             grid-template-rows: 4em 6em 6em 6em 6em 6em;
+            grid-row-gap: 1.2em;
         }
         
         @include layout( phone ) {
