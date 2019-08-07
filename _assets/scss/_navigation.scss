@@ -1,30 +1,85 @@
 .site-header nav {
     padding: 0.5em;
     text-align: center;
-}
-  
-.site-header nav ul {
-    padding: 0;
+
+    ul {
+        padding: 0;
+    }
+
+    li {
+        padding: 0 0.2em;
+
+        &:not(:last-child) {
+            border-right: 1px solid #666;
+        }
+
+        a {
+            font-size: 1.2em;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--color-primery);
+            text-decoration: none;
+            color: var(--color-primery);
+
+            &:hover {
+                background-color: var(--color-dark);
+                color: var(--color-darker);
+                box-shadow: 0px 0px 8px 2px var(--color-hover, 1);
+            }
+        }
+    }
 }
 
-.site-header nav li {
-    padding: 0 0.2em;
-}
-  
-.site-header nav li a{
-    font-size: 1.2em;
-    text-transform: uppercase;
-    border-bottom: 1px solid var(--color-primery);
-    text-decoration: none;
-    color: var(--color-primery);
+.toggle-nav-btn {
+    display: none;
+
+    .fa-times {
+        display: none;
+    }
+
+    i {
+        position: absolute;
+        top: 0.6em;
+        left: 0.6em;
+        font-size: 1.5em;
+    }
 }
 
-.site-header nav li a:hover{
-    background-color: var(--color-dark);
-    color: var(--color-darker);
-    box-shadow: 0px 0px 8px 2px var(--color-hover, 1);
-}
-  
-.site-header nav li:not(:last-child) {
-    border-right: 1px solid #666;
+.toggle-nav {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @include layout( mobile ) {
+
+        & + .site-header {
+            .toggle-nav-btn {
+                display: block;
+            }
+
+            .site-nav {
+                display: none;
+            }
+        }
+
+        &:checked + .site-header {
+
+            .site-nav {
+                display: block;
+            }
+
+            .toggle-nav-btn {
+                display: block;
+
+                .fa-bars {
+                    display: none;
+                }
+    
+                .fa-times {
+                    display: block;
+                }
+            }
+        }
+    }
 }
