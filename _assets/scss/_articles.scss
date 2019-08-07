@@ -1,4 +1,6 @@
 .articles {
+    
+    position: relative;
 
     @include layout( laptop ) {
         display: grid;
@@ -7,15 +9,24 @@
     }
 
     @include layout( phone ) {
-        display: block;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
     }
 
-    position: relative;
-
     article {
-        grid-column: span 3;
-        padding: 0 2em;
-        margin-bottom: 3em;
+        
+        @include layout( laptop ) {
+            grid-column: span 3;
+            padding: 0 2em;
+            margin-bottom: 3em;
+        }
+        
+        @include layout( phone ) {
+            flex: 0 0 82%;
+            padding: 0 1.5em;
+            margin-bottom: 4em;
+        }
         
         h2 {
             text-align: center;
@@ -26,9 +37,15 @@
         .image-container {
             display: block;
             position: relative;
-            width: 40em;
             margin: 0 auto;
-            padding-bottom: 5em;
+            
+            @include layout( laptop ) {
+                padding-bottom: 5em;
+            }
+
+            @include layout( phone ) {
+                width: 23em;
+            }
 
             img {
                 width: 100%;
@@ -40,6 +57,7 @@
                 transform: translate(-50%, -50%);
                 box-shadow: 40px 40px 50px 0px rgba(0,0,0,0.75);
                 border-radius: 1em 0 1em 0;
+
             }
 
             &:before {
@@ -62,20 +80,34 @@
         }
 
         p {
-            padding-bottom: 0.5em;
+            padding-bottom: 0.4em;
         }
     }
     
     .partners {
-        grid-column: span 1;
-        padding: 1em 0.5em;
-        grid-area: 1 / 4 / 2 / 4;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 4em 7em 7em 7em 7em 7em;
-        grid-row-gap: 2em;
+        
         position: sticky;
-        top: 2em;
+        
+        @include layout( laptop ) {
+            top: 2em;
+            grid-column: span 1;
+            padding: 1em 0.5em;
+            grid-area: 1 / 4 / 2 / 4;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 4em 6em 6em 6em 6em 6em;
+        }
+        
+        @include layout( phone ) {
+            top: 3em;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 4em 6em 6em 6em 6em 6em;            
+            grid-row-gap: 1.5em;
+            flex: 0 0 15%;
+            margin-left: auto;
+            padding-right: 0.5em;
+        } 
         
         h4 {
             border-bottom: 1px solid var(--color-hover);
@@ -85,20 +117,32 @@
         .partner-logo {
             box-shadow: 30px 30px 50px 0px rgba(0,0,0,0.75);
             position: relative;
-            width: 60%;
             display: block;
             overflow: hidden;
             transform: skew(-3deg, 0deg);
-            justify-self: center;
+            
+            @include layout( laptop ) {
+                width: 60%;
+                justify-self: center;
+            }
+
+            @include layout( phone ) {
+                flex-basis: 100%;
+            }
 
             img {
-                width: 80%;
+                width: 5em;
                 height: auto;
                 display: block;
                 position: absolute;
+                z-index: 1000;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
+
+                @include layout( phone ) {
+                    width: 100%;
+                }
             }
         }
     }
