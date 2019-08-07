@@ -47,9 +47,10 @@
         border-radius: 0.2em;
     }
     
-    @include layout( phone ) {
+    @include layout( mobile ) {
         display: block;
         margin-bottom: 2em;
+        padding: 1em 1.5em;
 
         .logo {
             justify-content: center;

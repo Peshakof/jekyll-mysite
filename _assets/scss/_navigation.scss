@@ -8,6 +8,7 @@
 
     li {
         padding: 0 0.2em;
+        list-style: none;
 
         &:not(:last-child) {
             border-right: 1px solid #666;
@@ -36,11 +37,22 @@
         display: none;
     }
 
-    i {
-        position: absolute;
-        top: 0.6em;
-        left: 0.6em;
-        font-size: 1.5em;
+    @include layout( mobile ) {
+        i {
+            position: absolute;
+            top: 1.5em;
+            left: 1.5em;
+            font-size: 2.4em;
+        }
+    }
+
+    @include layout( phone ) {
+        i {
+            position: absolute;
+            top: 0.6em;
+            left: 0.6em;
+            font-size: 2.2em;
+        }
     }
 }
 
