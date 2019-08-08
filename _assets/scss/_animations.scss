@@ -11,7 +11,6 @@
     transition: box-shadow 0.2s ease-in;
 }
 
-
 /* gallery */
 
 .gallery ul li {
@@ -29,14 +28,8 @@
     
 //  breeds
 
-@keyframes bounce {
-    from {
-        top: -3px;
-    }
-
-    to {
-        top: -15px;
-    }
+.rank span:after {
+    transition: box-shadow 0.3s ease-out;
 }
 
 @keyframes slide {
