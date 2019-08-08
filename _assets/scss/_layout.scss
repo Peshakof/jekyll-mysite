@@ -1,7 +1,7 @@
 .site {
     max-width: var(--layout-main-width);
     margin: 0 auto;
-    padding: 2em;
+    padding: 0 1em 1em 1em;
 
     @include layout( phone ) {
         padding: 0;

@@ -94,7 +94,7 @@ blockquote .author:before {
 .site {
   max-width: var(--layout-main-width);
   margin: 0 auto;
-  padding: 2em; }
+  padding: 0 1em 1em 1em; }
   @media (max-width: 650px) {
     .site {
       padding: 0; } }
@@ -282,22 +282,53 @@ footer {
     .articles {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: auto; } }
-  @media (max-width: 650px) {
+      grid-template-rows: auto; }
+      .articles article {
+        grid-column: span 3;
+        padding: 0 2em;
+        margin-bottom: 3em; }
+      .articles .image-container {
+        padding-bottom: 5em; }
+      .articles .partners {
+        top: 4.5em;
+        right: 12em;
+        grid-column: span 1;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3em 6em 6em 6em 6em 6em;
+        grid-row-gap: 1.2em; }
+      .articles .partner-logo {
+        width: 70%;
+        justify-self: center; } }
+  @media (max-width: 1023px) {
     .articles {
       display: flex;
       flex-wrap: wrap;
-      align-items: flex-start; } }
-  @media (min-width: 1024px) {
-    .articles article {
-      grid-column: span 3;
-      padding: 0 2em;
-      margin-bottom: 3em; } }
-  @media (max-width: 650px) {
-    .articles article {
-      flex: 0 0 82%;
-      padding: 0 1.5em;
-      margin-bottom: 4em; } }
+      align-items: flex-start; }
+      .articles article {
+        flex: 0 1 83%;
+        padding: 0 1.5em;
+        margin-bottom: 4em; }
+      .articles .image-container {
+        width: 23em; }
+      .articles .partners {
+        top: 6.5em;
+        right: 0.5em;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3em 6em 6em 6em 6em 6em;
+        grid-row-gap: 1.5em;
+        flex: 0 1 15%;
+        padding-left: 0.5em;
+        justify-content: flex-end; }
+        .articles .partners header h4 {
+          width: 70%;
+          margin-left: auto; }
+      .articles .partner-logo {
+        width: 6em;
+        justify-self: flex-end; }
+        .articles .partner-logo img {
+          width: 100%; } }
   .articles article h2 {
     text-align: center;
     border-bottom: 1px solid var(--color-hover);
@@ -306,12 +337,6 @@ footer {
     display: block;
     position: relative;
     margin: 0 auto; }
-    @media (min-width: 1024px) {
-      .articles article .image-container {
-        padding-bottom: 5em; } }
-    @media (max-width: 650px) {
-      .articles article .image-container {
-        width: 23em; } }
     .articles article .image-container img {
       width: 100%;
       height: auto;
@@ -335,28 +360,7 @@ footer {
   .articles article p {
     padding-bottom: 0.4em; }
   .articles .partners {
-    position: -webkit-sticky;
-    position: sticky; }
-    @media (min-width: 1024px) {
-      .articles .partners {
-        top: 2em;
-        grid-column: span 1;
-        padding: 1em 0.5em;
-        grid-area: 1 / 4 / 2 / 4;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 4em 6em 6em 6em 6em 6em;
-        grid-row-gap: 1.2em; } }
-    @media (max-width: 650px) {
-      .articles .partners {
-        top: 3em;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 4em 6em 6em 6em 6em 6em;
-        grid-row-gap: 1.5em;
-        flex: 0 0 15%;
-        margin-left: auto;
-        padding-right: 0.5em; } }
+    position: fixed; }
     .articles .partners h4 {
       border-bottom: 1px solid var(--color-hover);
       text-align: center; }
@@ -365,16 +369,10 @@ footer {
       position: relative;
       display: block;
       overflow: hidden;
-      transform: skew(-3deg, 0deg); }
-      @media (min-width: 1024px) {
-        .articles .partners .partner-logo {
-          width: 60%;
-          justify-self: center; } }
-      @media (max-width: 650px) {
-        .articles .partners .partner-logo {
-          flex-basis: 100%; } }
+      transform: skew(-3deg, 0deg);
+      border-radius: 0.3em; }
       .articles .partners .partner-logo img {
-        width: 5em;
+        width: 100%;
         height: auto;
         display: block;
         position: absolute;
@@ -382,9 +380,6 @@ footer {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%); }
-        @media (max-width: 650px) {
-          .articles .partners .partner-logo img {
-            width: 100%; } }
 
 @media (min-width: 1024px) {
   .main .home-page-header {

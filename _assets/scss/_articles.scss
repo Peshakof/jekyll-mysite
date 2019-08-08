@@ -1,33 +1,81 @@
 .articles {
-    
     position: relative;
 
     @include layout( laptop ) {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: auto;
-    }
 
-    @include layout( phone ) {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: flex-start;
-    }
-
-    article {
-        
-        @include layout( laptop ) {
+        article {
             grid-column: span 3;
             padding: 0 2em;
             margin-bottom: 3em;
         }
-        
-        @include layout( phone ) {
-            flex: 0 0 82%;
+
+        .image-container {
+            padding-bottom: 5em;
+        }
+
+        .partners {
+            top: 4.5em;
+            right: 12em;
+            grid-column: span 1;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 3em 6em 6em 6em 6em 6em;
+            grid-row-gap: 1.2em;
+        }
+
+        .partner-logo {
+            width: 70%;
+            justify-self: center;
+        }
+    }
+
+    @include layout( mobile ) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+
+        article {
+            flex: 0 1 83%;
             padding: 0 1.5em;
             margin-bottom: 4em;
         }
-        
+
+        .image-container {
+            width: 23em;
+        }
+
+        .partners {
+            top: 6.5em;
+            right: 0.5em;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 3em 6em 6em 6em 6em 6em;            
+            grid-row-gap: 1.5em;
+            flex: 0 1 15%;
+            padding-left: 0.5em;
+            justify-content: flex-end;
+
+            header h4 {
+                width: 70%;
+                margin-left: auto;
+            }
+        }
+
+        .partner-logo {
+            width: 6em;
+            justify-self: flex-end;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    article {
+    
         h2 {
             text-align: center;
             border-bottom: 1px solid var(--color-hover);
@@ -38,14 +86,6 @@
             display: block;
             position: relative;
             margin: 0 auto;
-            
-            @include layout( laptop ) {
-                padding-bottom: 5em;
-            }
-
-            @include layout( phone ) {
-                width: 23em;
-            }
 
             img {
                 width: 100%;
@@ -57,7 +97,6 @@
                 transform: translate(-50%, -50%);
                 box-shadow: 40px 40px 50px 0px rgba(0,0,0,0.75);
                 border-radius: 1em 0 1em 0;
-
             }
 
             &:before {
@@ -86,29 +125,7 @@
     
     .partners {
         
-        position: sticky;
-        
-        @include layout( laptop ) {
-            top: 2em;
-            grid-column: span 1;
-            padding: 1em 0.5em;
-            grid-area: 1 / 4 / 2 / 4;
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 4em 6em 6em 6em 6em 6em;
-            grid-row-gap: 1.2em;
-        }
-        
-        @include layout( phone ) {
-            top: 3em;
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 4em 6em 6em 6em 6em 6em;            
-            grid-row-gap: 1.5em;
-            flex: 0 0 15%;
-            margin-left: auto;
-            padding-right: 0.5em;
-        } 
+        position: fixed;
         
         h4 {
             border-bottom: 1px solid var(--color-hover);
@@ -121,18 +138,10 @@
             display: block;
             overflow: hidden;
             transform: skew(-3deg, 0deg);
+            border-radius: 0.3em;
             
-            @include layout( laptop ) {
-                width: 60%;
-                justify-self: center;
-            }
-
-            @include layout( phone ) {
-                flex-basis: 100%;
-            }
-
             img {
-                width: 5em;
+                width: 100%;
                 height: auto;
                 display: block;
                 position: absolute;
@@ -140,13 +149,7 @@
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-
-                @include layout( phone ) {
-                    width: 100%;
-                }
             }
         }
-    }
-    
+    } 
 }
-
