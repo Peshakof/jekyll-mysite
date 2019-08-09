@@ -19,11 +19,13 @@
     }
 
     @include layout( phone ) {
+
         ul {
             grid-template-columns: 1fr;
             grid-template-rows: auto;
             grid-gap: 1.5em;
         }
+
     }
     
     @include layout( laptop ) {
@@ -40,19 +42,23 @@
     }
     
     @include layout( desktop ) {
+
         ul {
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: auto;
             grid-gap: 1.7em;
         }
+
     }
 
     @include layout( desktop-large ) {
+
         ul {
             grid-template-columns: repeat(5, 1fr);
             grid-template-rows: auto;
             grid-gap: 1.8em;
         }
+
     }
 
     ul {
@@ -121,7 +127,7 @@
         opacity: 1;
     }
 
-    i{
+    i {
         display: block;
         position: absolute;
         top: 50%;

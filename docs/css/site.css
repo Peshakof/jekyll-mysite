@@ -100,14 +100,6 @@ blockquote .author:before {
     .site {
       padding: 0; } }
 
-@media (min-width: 1024px) {
-  .site-header nav {
-    margin-left: auto; }
-  .site-header nav li {
-    display: inline-block; }
-  .site-header nav a {
-    padding: 0.25em 1em; } }
-
 .site-header {
   background-color: var(--color-darker);
   border-radius: 5px;
@@ -164,6 +156,13 @@ blockquote .author:before {
 .site-header nav {
   padding: 0.5em;
   text-align: center; }
+  @media (min-width: 1024px) {
+    .site-header nav {
+      margin-left: auto; }
+      .site-header nav li {
+        display: inline-block; }
+      .site-header nav a {
+        padding: 0.25em 1em; } }
   .site-header nav ul {
     padding: 0; }
   .site-header nav li {
@@ -186,18 +185,17 @@ blockquote .author:before {
   display: none; }
   .toggle-nav-btn .fa-times {
     display: none; }
-  @media (max-width: 650px) {
-    .toggle-nav-btn i {
-      position: absolute;
-      top: 0.6em;
-      left: 0.6em;
-      font-size: 2.2em; } }
   @media (max-width: 1023px) {
     .toggle-nav-btn i {
       position: absolute;
       top: 1em;
       left: 1.5em;
       font-size: 2.5em; } }
+  @media (max-width: 650px) {
+    .toggle-nav-btn i {
+      top: 0.6em;
+      left: 0.6em;
+      font-size: 2.2em; } }
 
 .toggle-nav {
   opacity: 0;
@@ -445,6 +443,8 @@ footer {
         display: block;
         content: '';
         padding-top: 56.25%; }
+      .main .latest-posts li h6 {
+        font-size: 1.3em; }
     .main .latest-posts li.small header {
       position: absolute;
       z-index: 200;
@@ -456,7 +456,7 @@ footer {
 
 @media (max-width: 650px) {
   .main .home-page-header {
-    height: 13em; }
+    height: 15em; }
   .main .latest-posts {
     display: flex;
     flex-wrap: wrap;
