@@ -114,6 +114,11 @@
 
     .home-page-header {
 
+        .description {
+            color: var(--color-hover);
+            font-size: 1.2em;
+        }
+
         img {
             width: 100%;
             height: auto;
