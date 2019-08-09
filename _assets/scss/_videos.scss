@@ -1,15 +1,7 @@
 .videos {
 
-    h3 {
-        padding-bottom: 3em;
-    }
-
     .video-container {
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: repeat(3, 270px);
-        grid-column-gap: 2em;
-        grid-row-gap: 2.5em;
         grid-auto-flow: dense;
         justify-content: center;
     }
@@ -40,32 +32,128 @@
         }
     }
 
-    .small {
-        grid-column: span 2;
-        grid-row: span 1;
+    @include layout( mobile ) {
 
-        h6 {
-            top: 0.8em;
+        h3 {
+            padding: 0 2em 2em 2em;
+            text-align: center;
+        }
+
+        .video-container {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 250px);
+            grid-gap: 2em;
+        }
+
+        .small,
+        .big {
+            grid-column: span 2;
+            grid-row: span 1;
+        }
+
+        .small h6 {
+            top: -1.8em;
+            left: 0.5em;
+        }
+
+        .big h6 {
+            top: -1.8em;
             left: 0.5em;
         }
     }
-    
-    .big {
-        grid-column: span 3;
-        grid-row: span 1;
 
-        &:nth-child(even) h6 {
-            padding-left: 50%;
+    @include layout( phone ) {
+        .video-container {
+            grid-template-columns: 30em;
+            grid-template-rows: repeat(6, 16.8em);
+            grid-row-gap: 3em;
         }
 
-        h6 {
-            top: -2.4em;
+        .small,
+        .big {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+
+        .small h6 {
+            top: -1.5em;
             left: 0.5em;
         }
-    
-        p {
-            padding-top: 1em;
-            font-size: 3.4em;
+
+        .big h6 {
+            top: -1.5em;
+            left: 0.5em;
         }
     }
+
+    @include layout( small-phone ) {
+        .video-container {
+            grid-template-columns: 20em;
+            grid-template-rows: repeat(6, 11.25em);
+            grid-row-gap: 3em;
+        }
+    }
+
+    @include layout( laptop ) {
+        h3 {
+            padding-bottom: 3em;
+        }
+
+        .video-container {
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(3, 270px);
+            grid-column-gap: 2em;
+            grid-row-gap: 3.5em;
+        }
+
+        .small {
+            grid-column: span 2;
+            grid-row: span 1;
+    
+            h6 {
+                top: 0.8em;
+                left: 0.5em;
+            }
+        }
+
+        .big {
+            grid-column: span 3;
+            grid-row: span 1;
+    
+            h6 {
+                top: -2.4em;
+                left: 0.5em;
+            }
+
+            &:nth-child(even) h6 {
+                width: 100%;
+                text-align: right;
+            }
+    
+        
+            p {
+                padding-top: 1em;
+                font-size: 3.4em;
+            }
+        }
+    }
+
+    @include layout( desktop ) {
+        .video-container {
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(3, 14em);
+            grid-column-gap: 2em;
+            grid-row-gap: 3.5em;
+        }
+
+        .small {
+            grid-column: span 2;
+            grid-row: span 1;
+        }
+
+        .big {
+            grid-column: span 4;
+            grid-row: span 2;
+        }
+    } 
 }
