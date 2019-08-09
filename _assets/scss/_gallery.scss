@@ -8,7 +8,7 @@
         ul {
             display: grid;
             padding-left: 0;
-            grid-template-columns: 1fr;
+            grid-template-columns: 1fr 1fr;
             grid-template-rows: auto;
             grid-gap: 1em;
         }
@@ -18,16 +18,40 @@
         }
     }
 
+    @include layout( phone ) {
+        ul {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            grid-gap: 1.5em;
+        }
+    }
+    
     @include layout( laptop ) {
-
+        
         ul {
             margin: 2em auto;
             padding: 1em;
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             grid-template-rows: auto;
             grid-gap: 1.5em;
             justify-content: center;
+        }
+    }
+    
+    @include layout( desktop ) {
+        ul {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto;
+            grid-gap: 1.7em;
+        }
+    }
+
+    @include layout( desktop-large ) {
+        ul {
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: auto;
+            grid-gap: 1.8em;
         }
     }
 

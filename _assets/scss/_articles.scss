@@ -17,8 +17,9 @@
         }
 
         .partners {
-            top: 4.5em;
-            right: 12em;
+            // top: 4.5em;
+            top: 5em;
+            right: 7em;
             grid-column: span 1;
             display: grid;
             grid-template-columns: 1fr;
@@ -29,6 +30,20 @@
         .partner-logo {
             width: 70%;
             justify-self: center;
+        }
+    }
+
+    @include layout( desktop ) {
+        .partners {
+            right: 10em;
+        }
+    }
+
+    @include layout( desktop-large ) {
+        .partners {
+            top: 4em;
+            right: 10em;
+            grid-template-rows: 2.3em 6em 6em 6em 6em 6em;
         }
     }
 
@@ -44,7 +59,7 @@
         }
 
         .image-container {
-            width: 23em;
+            width: 30em;
         }
 
         .partners {
@@ -71,6 +86,31 @@
             img {
                 width: 100%;
             }
+        }
+    }
+
+    @include layout( phone ) {
+        .image-container {
+            width: 23em;
+        }
+    }
+
+    @include layout( small-phone ) {
+        .image-container {
+            width: 18em;
+        }
+
+        .partners {
+            top: 10em;
+            grid-template-rows: 3em 4.5em 4.5em 4.5em 4.5em 4.5em;
+            
+            h4 {
+                font-size: 1.2em;
+            }
+        }
+
+        .partner-logo {
+            width: 4.5em;
         }
     }
 

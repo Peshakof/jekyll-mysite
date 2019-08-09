@@ -5,44 +5,6 @@
 
 .cat-container {
 
-    @include layout( laptop ) {
-        display: grid;
-        grid-template-columns: repeat(7, 1fr);
-        grid-template-rows: auto;
-        margin-bottom: 2em;
-        animation: slide 0.2s ease-in;
-        animation-fill-mode: both;
-        &:nth-child(2) { animation-delay: 0.1s };
-        &:nth-child(3) { animation-delay: 0.2s };
-
-        .breed-info {
-            grid-column: span 4;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-            align-items: flex-start;
-        }
-
-        .avatar {
-            display: block;
-            flex: 0 0 40% ;
-        }
-
-        .temperament {
-            padding: 0 1em;
-            font-size: 18px;
-            flex: 0 0 60%;
-        }
-
-        .description {
-            grid-column: span 2;
-
-            p {
-                padding: 0 0 0 2em;
-            }
-        }
-    }
-
     @include layout( mobile ) {
         display: grid;
         grid-template-columns: 1fr;
@@ -78,6 +40,44 @@
 
             p {
                 padding-bottom: 0.5em;
+            }
+        }
+    }
+
+    @include layout( laptop ) {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: auto;
+        margin-bottom: 2em;
+        animation: slide 0.2s ease-in;
+        animation-fill-mode: both;
+        &:nth-child(2) { animation-delay: 0.1s };
+        &:nth-child(3) { animation-delay: 0.2s };
+
+        .breed-info {
+            grid-column: span 4;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        .avatar {
+            display: block;
+            flex: 0 0 40% ;
+        }
+
+        .temperament {
+            padding: 0 1em;
+            font-size: 18px;
+            flex: 0 0 60%;
+        }
+
+        .description {
+            grid-column: span 2;
+
+            p {
+                padding: 0 0 0 2em;
             }
         }
     }
@@ -200,9 +200,18 @@
     
     position: fixed;
 
+    @include layout( mobile ) {
+        top: 15em;
+        right: 1em;
+
+        i {
+            font-size: 2.2em;
+        }
+    }
+
     @include layout( laptop ) {
         top: 8em;
-        right: 5em;
+        right: 1em;
         padding: 1em 2em;
 
         i {
@@ -210,12 +219,13 @@
         }
     }
 
-    @include layout( phone ) {
-        top: 15em;
-        right: 1em;
+    @include layout( desktop ) {
+        top: 6em;
+        right: 2.5em;
+        padding: 1em 2em;
 
         i {
-            font-size: 2.2em;
+            font-size: 4.5em;
         }
     }
 
