@@ -32,6 +32,15 @@
         }
     }
 
+    .message {
+
+        p {
+            padding: 1em 0 0 0;
+            font-size: 3em;
+        }
+
+    }
+
     @include layout( mobile ) {
 
         h3 {
@@ -136,10 +145,6 @@
                 text-align: right;
             }
     
-            p {
-                padding-top: 1em;
-                font-size: 3.4em;
-            }
         }
     }
 
@@ -158,8 +163,12 @@
         }
 
         .big {
-            grid-column: span 4;
-            grid-row: span 2;
+            grid-column: span 3;
+            grid-row: span 1;
+
+            &:nth-child(even) h6 {
+                text-align: left;
+            }
         }
     } 
 }

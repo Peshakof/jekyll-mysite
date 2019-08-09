@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,400i,700,700i|Merriweather:400,400i,700,700i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lacquer|Quicksand:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
 
 *, *:before, *:after {
     margin: 0;
@@ -8,7 +10,7 @@
 
 html {
     box-sizing: border-box;
-    font: var(--font-size-body, 14px)/1.5 "Fira Sans", Georgia, serif;
+    font: var(--font-size-body, 14px)/1.5 "Quicksand", Georgia, serif;
 }
 
 @media ( min-width: 600px ) {
@@ -34,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1em;
     margin-bottom: 0.5em;
     font-weight: normal;
-    font-family: Merriweather, serif;
+    font-family: "Roboto", serif;
 }
 
 h1 { font-size: 2.6em; }

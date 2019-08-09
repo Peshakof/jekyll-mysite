@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,400i,700,700i|Merriweather:400,400i,700,700i&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lacquer|Quicksand:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
 :root {
   --font-size-body: 14px;
   --font-size-body-big: 16px;
@@ -18,7 +20,7 @@
 
 html {
   box-sizing: border-box;
-  font: var(--font-size-body, 14px)/1.5 "Fira Sans", Georgia, serif; }
+  font: var(--font-size-body, 14px)/1.5 "Quicksand", Georgia, serif; }
 
 @media (min-width: 600px) {
   html {
@@ -42,7 +44,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1em;
   margin-bottom: 0.5em;
   font-weight: normal;
-  font-family: Merriweather, serif; }
+  font-family: "Roboto", serif; }
 
 h1 {
   font-size: 2.6em; }
@@ -92,13 +94,15 @@ blockquote .author:before {
   content: '\2014';
   padding-right: 0.5em; }
 
-.site {
-  max-width: var(--layout-main-width);
-  margin: 0 auto;
-  padding: 0 1em 1em 1em; }
-  @media (max-width: 650px) {
-    .site {
-      padding: 0; } }
+html {
+  scroll-behavior: smooth; }
+  html .site {
+    max-width: var(--layout-main-width);
+    margin: 0 auto;
+    padding: 0 1em 1em 1em; }
+    @media (max-width: 650px) {
+      html .site {
+        padding: 0; } }
 
 .site-header {
   background-color: var(--color-darker);
@@ -994,6 +998,10 @@ footer {
     transform: translate(-50%, -50%);
     box-shadow: 2px 2px 8px 5px var(--color-darker, 0.75); }
 
+.videos .message p {
+  padding: 1em 0 0 0;
+  font-size: 3em; }
+
 @media (max-width: 1023px) {
   .videos h3 {
     padding: 0 2em 2em 2em;
@@ -1057,10 +1065,7 @@ footer {
       left: 0.5em; }
     .videos .big:nth-child(even) h6 {
       width: 100%;
-      text-align: right; }
-    .videos .big p {
-      padding-top: 1em;
-      font-size: 3.4em; } }
+      text-align: right; } }
 
 @media (min-width: 1250px) {
   .videos .video-container {
@@ -1072,5 +1077,7 @@ footer {
     grid-column: span 2;
     grid-row: span 1; }
   .videos .big {
-    grid-column: span 4;
-    grid-row: span 2; } }
+    grid-column: span 3;
+    grid-row: span 1; }
+    .videos .big:nth-child(even) h6 {
+      text-align: left; } }

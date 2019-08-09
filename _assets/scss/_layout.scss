@@ -1,9 +1,14 @@
-.site {
-    max-width: var(--layout-main-width);
-    margin: 0 auto;
-    padding: 0 1em 1em 1em;
+html {
+    scroll-behavior: smooth;
 
-    @include layout( phone ) {
-        padding: 0;
+    .site {
+        max-width: var(--layout-main-width);
+        margin: 0 auto;
+        padding: 0 1em 1em 1em;
+    
+        @include layout( phone ) {
+            padding: 0;
+        }
     }
+
 }
