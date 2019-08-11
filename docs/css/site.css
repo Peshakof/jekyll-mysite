@@ -322,6 +322,8 @@ footer {
         flex: 0 1 83%;
         padding: 0 1.5em;
         margin-bottom: 4em; }
+        .articles article p {
+          font-size: 1.2em; }
       .articles .image-container {
         width: 30em; }
       .articles .partners {
@@ -985,7 +987,7 @@ footer {
     position: absolute;
     z-index: 300;
     font-weight: bold;
-    font-size: 1.1em; }
+    font-size: 1.2em; }
   .videos .video-box video {
     border-radius: 0.4em;
     outline: none;
